@@ -1,0 +1,19 @@
+{
+  "courseId": 8,
+  "course": "操作系统",
+  "resource": "MIT xv6 RISC-V Book rev5",
+  "resourceStatus": "READY",
+  "chunkCount": 335,
+  "evaluationRun": "2026-09-07 16:45:51",
+  "total": 20,
+  "passed": 20,
+  "routePassed": 20,
+  "evidencePassed": 20,
+  "passRate": 1.0,
+  "averageLatencyMs": 27255.0,
+  "minLatencyMs": 18714,
+  "maxLatencyMs": 36639,
+  "retrievalMode": "HYBRID_KEYWORD_TFIDF",
+  "failed": [],
+  "note": "生产接口真实复测：20 条操作系统课程问题均通过课程 RAG 路由、课程证据和答案要点检查。"
+}

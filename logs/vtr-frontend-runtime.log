@@ -1,0 +1,10 @@
+
+  VITE v8.0.3  ready in 378 ms
+
+  ➜  Local:   http://127.0.0.1:3000/
+  ➜  press h + enter to show help
+19:29:54 [vite] (client) hmr update /src/components/KnowledgeBubbleGraph.vue
+19:31:12 [vite] (client) hmr update /src/components/KnowledgeBubbleGraph.vue
+19:31:58 [vite] (client) hmr update /src/components/KnowledgeBubbleGraph.vue?vue&type=style&index=0&scoped=e168339a&lang.css
+19:35:48 [vite] (client) hmr update /src/views/CoursewareView.vue
+19:36:09 [vite] (client) hmr update /src/views/CoursewareView.vue

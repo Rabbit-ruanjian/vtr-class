@@ -1,0 +1,100 @@
+
+> virtual-teaching-frontend@0.0.0 dev
+> vite --host 127.0.0.1
+
+
+  [32m[1mVITE[22m v8.0.3[39m  [2mready in [0m[1m966[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m3000[22m/[39m
+[2m17:12:16[22m [33m[1m[vite][22m[39m [33m[2m(client)[22m[39m [2m[console.warn] [22mElementPlusError: [el-radio] [API] label act as value is about to be deprecated in version 3.0.0, please use value instead.
+For more detail, please visit: https://element-plus.org/en-US/component/radio.html
+
+    at debugWarn (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:4751:35)
+    at watch.immediate (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5569:12)
+    at callWithErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1873:17)
+    at callWithAsyncErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1880:15)
+    at baseWatchOptions.call (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2372:46)
+    at job (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1654:13)
+    at watch$1 (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1675:25)
+    at doWatch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2394:22)
+    at watch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2346:9)
+    at useDeprecated (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5568:2)
+[2m17:12:16[22m [33m[1m[vite][22m[39m [33m[2m(client)[22m[39m [2m[console.warn] [22mElementPlusError: [el-radio] [API] label act as value is about to be deprecated in version 3.0.0, please use value instead.
+For more detail, please visit: https://element-plus.org/en-US/component/radio.html
+
+    at debugWarn (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:4751:35)
+    at watch.immediate (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5569:12)
+    at callWithErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1873:17)
+    at callWithAsyncErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1880:15)
+    at baseWatchOptions.call (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2372:46)
+    at job (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1654:13)
+    at watch$1 (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1675:25)
+    at doWatch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2394:22)
+    at watch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2346:9)
+    at useDeprecated (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5568:2)
+[2m17:12:16[22m [33m[1m[vite][22m[39m [33m[2m(client)[22m[39m [2m[console.warn] [22mElementPlusError: [el-radio] [API] label act as value is about to be deprecated in version 3.0.0, please use value instead.
+For more detail, please visit: https://element-plus.org/en-US/component/radio.html
+
+    at debugWarn (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:4751:35)
+    at watch.immediate (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5569:12)
+    at callWithErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1873:17)
+    at callWithAsyncErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1880:15)
+    at baseWatchOptions.call (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2372:46)
+    at job (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1654:13)
+    at watch$1 (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1675:25)
+    at doWatch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2394:22)
+    at watch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2346:9)
+    at useDeprecated (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5568:2)
+[2m17:12:21[22m [33m[1m[vite][22m[39m [33m[2m(client)[22m[39m [2m[console.warn] [22mElementPlusError: [el-radio] [API] label act as value is about to be deprecated in version 3.0.0, please use value instead.
+For more detail, please visit: https://element-plus.org/en-US/component/radio.html
+
+    at debugWarn (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:4751:35)
+    at watch.immediate (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5569:12)
+    at callWithErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1873:17)
+    at callWithAsyncErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1880:15)
+    at baseWatchOptions.call (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2372:46)
+    at job (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1654:13)
+    at watch$1 (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1675:25)
+    at doWatch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2394:22)
+    at watch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2346:9)
+    at useDeprecated (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5568:2)
+[2m17:12:21[22m [33m[1m[vite][22m[39m [33m[2m(client)[22m[39m [2m[console.warn] [22mElementPlusError: [el-radio] [API] label act as value is about to be deprecated in version 3.0.0, please use value instead.
+For more detail, please visit: https://element-plus.org/en-US/component/radio.html
+
+    at debugWarn (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:4751:35)
+    at watch.immediate (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5569:12)
+    at callWithErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1873:17)
+    at callWithAsyncErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1880:15)
+    at baseWatchOptions.call (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2372:46)
+    at job (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1654:13)
+    at watch$1 (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1675:25)
+    at doWatch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2394:22)
+    at watch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2346:9)
+    at useDeprecated (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5568:2)
+[2m17:12:21[22m [33m[1m[vite][22m[39m [33m[2m(client)[22m[39m [2m[console.warn] [22mElementPlusError: [el-radio] [API] label act as value is about to be deprecated in version 3.0.0, please use value instead.
+For more detail, please visit: https://element-plus.org/en-US/component/radio.html
+
+    at debugWarn (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:4751:35)
+    at watch.immediate (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5569:12)
+    at callWithErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1873:17)
+    at callWithAsyncErrorHandling (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1880:15)
+    at baseWatchOptions.call (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2372:46)
+    at job (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1654:13)
+    at watch$1 (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:1675:25)
+    at doWatch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2394:22)
+    at watch (http://127.0.0.1:3000/node_modules/.vite/deps/vue.runtime.esm-bundler-v-a3Yrua.js?v=c2a6e939:2346:9)
+    at useDeprecated (http://127.0.0.1:3000/node_modules/.vite/deps/element-plus.js?v=c2a6e939:5568:2)
+[2m17:18:07[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/views/CoursewareView.vue[22m
+[2m17:19:12[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/views/CoursewareView.vue[22m
+[2m17:20:17[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/views/CoursewareView.vue[22m
+[2m17:20:59[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/views/CoursewareView.vue[22m
+[2m17:21:16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/views/CoursewareView.vue[22m
+[2m17:46:13[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/api/index.js[22m
+[2m17:46:58[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/views/CoursewareView.vue[22m
+[2m17:47:23[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/views/CoursewareView.vue[22m
+[2m17:49:25[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/views/CoursewareView.vue[22m
+[2m17:54:55[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/views/CoursewareView.vue[22m
+[2m17:55:43[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/views/CoursewareView.vue[22m
+[2m18:44:02[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/views/CoursewareView.vue[22m
+
+E:\新的\源代码\virtual-teaching-room\vtr-frontend\virtual-teaching-frontend>
