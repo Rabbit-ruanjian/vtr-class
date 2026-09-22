@@ -1,3 +1,4 @@
 # 本机 AI 配置文件可能包含 API Key，只保留 ai.env.example 进入版本库。
 config/ai.env
 config/smtp-password.dat
+logs/vtr-backend-runtime.log
