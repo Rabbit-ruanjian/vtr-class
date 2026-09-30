@@ -2,3 +2,30 @@
 config/ai.env
 config/smtp-password.dat
 logs/vtr-backend-runtime.log
+
+# 运行时日志、临时输出和本地缓存
+**/logs/
+**/*.log
+**/*.err.log
+**/*.out.log
+**/*.stderr.log
+**/*.stdout.log
+**/*.dat
+**/*.gz
+
+# 运行时上传文件（课程资料、附件、课件等）
+**/uploads/
+outputs/
+
+# Java / Maven 构建产物与本地依赖缓存
+**/target/
+**/.m2-offline/
+*.class
+
+# Node.js 依赖与前端构建产物
+**/node_modules/
+**/dist/
+**/.vite/
+
+# 本地开发工具和嵌套仓库备份
+virtual-teaching-room/.git.nested-backup/

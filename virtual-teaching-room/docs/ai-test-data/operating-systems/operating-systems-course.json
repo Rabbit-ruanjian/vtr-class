@@ -1,0 +1,28 @@
+{
+  "courseName": "操作系统（xv6 RISC-V 测试课）",
+  "courseCode": "OS-XV6-TEST",
+  "description": "使用 MIT xv6 教学操作系统资料，验证课程知识库、RAG 引用和 AI 学习问答闭环。",
+  "level": "本科计算机相关专业入门至中级",
+  "language": "zh-CN",
+  "resourceFiles": [
+    {
+      "fileName": "operating-systems-xv6-course-notes.md",
+      "resourceType": "COURSE_NOTE",
+      "chapter": "第1章至第12章",
+      "status": "PUBLISHED_AFTER_TEACHER_REVIEW"
+    }
+  ],
+  "source": {
+    "title": "xv6: a simple, Unix-like teaching operating system",
+    "authors": ["Russ Cox", "Frans Kaashoek", "Robert Morris"],
+    "url": "https://pdos.csail.mit.edu/6.1810/2025/xv6/book-riscv-rev5.pdf",
+    "repository": "https://github.com/mit-pdos/xv6-riscv-book",
+    "license": "MIT License as provided by the official xv6-riscv-book repository"
+  },
+  "aiPolicy": {
+    "requireCourseCitation": true,
+    "answerWhenEvidenceMissing": "明确说明当前课程资料没有覆盖，不得伪造教材依据。",
+    "allowGeneralKnowledge": true,
+    "generalKnowledgeLabel": "以下是通用操作系统知识，不一定来自本课程资料。"
+  }
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "id": "OS-RAG-001",
+    "category": "课程知识",
+    "question": "操作系统主要为应用程序提供什么作用？",
+    "expectedAnswer": "操作系统负责管理和抽象硬件资源，为应用程序提供受保护、稳定的服务接口，并支持多个程序共享处理器、内存和设备。",
+    "source": "第1章 操作系统接口；第1章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-002",
+    "category": "课程知识",
+    "question": "进程通常由哪些部分组成？",
+    "expectedAnswer": "在 xv6 的语境中，进程包含用户空间中的指令、数据和栈，以及由内核维护的进程状态。",
+    "source": "第1章 操作系统接口；第1章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-003",
+    "category": "系统调用",
+    "question": "fork 和 exec 的作用有什么区别？",
+    "expectedAnswer": "fork 创建一个新的子进程，通常使子进程开始时拥有父进程的地址空间副本；exec 使用指定的可执行文件替换当前进程的程序内容。",
+    "source": "第1章 操作系统接口；第1章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-004",
+    "category": "权限保护",
+    "question": "为什么操作系统要区分用户态和内核态？",
+    "expectedAnswer": "为了限制普通程序直接执行特权操作或访问其他进程、设备和内核数据。用户程序需要通过系统调用请求内核服务，由内核检查参数并执行受保护操作。",
+    "source": "第2章 操作系统组织；第2章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-005",
+    "category": "虚拟内存",
+    "question": "页表解决了什么问题？",
+    "expectedAnswer": "页表把进程使用的虚拟地址映射到物理地址，并通过权限位控制页面的读、写、执行和用户态访问权限。",
+    "source": "第3章 页表；第3章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-006",
+    "category": "虚拟内存",
+    "question": "为什么 xv6 的程序代码页通常不允许写入？",
+    "expectedAnswer": "为了减少程序错误修改自身指令的风险。通过去掉写权限，非法写入会触发页错误，内核可以发现并处理该错误。",
+    "source": "第3章 页表；第3章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-007",
+    "category": "陷阱",
+    "question": "系统调用、设备中断和异常之间有什么共同机制？",
+    "expectedAnswer": "它们都可以通过陷阱机制暂停当前执行流并转交给内核中的相应处理程序。内核根据陷阱原因选择处理路径，完成后恢复执行状态。",
+    "source": "第4章 陷阱与系统调用；第4章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-008",
+    "category": "页错误",
+    "question": "什么是延迟分配？它为什么可以节省资源？",
+    "expectedAnswer": "延迟分配是在程序真正访问某个虚拟页面时才分配物理页，而不是在申请地址空间时立即分配全部物理页。这样可以避免为从未使用的页面分配内存。",
+    "source": "第5章 页错误；第5章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-009",
+    "category": "页错误",
+    "question": "写时复制 fork 的基本思想是什么？",
+    "expectedAnswer": "父子进程开始时共享只读页面，只有某一方真正写入页面时才触发页错误，内核再复制该页面并建立独立的可写映射，从而减少不必要的复制。",
+    "source": "第5章 页错误；第5章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-010",
+    "category": "设备驱动",
+    "question": "设备中断有什么作用？",
+    "expectedAnswer": "设备中断允许设备在需要处理时通知处理器，例如定时器通知内核时钟事件、串口设备通知内核有输入到达。",
+    "source": "第6章 中断与设备驱动；第6章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-011",
+    "category": "并发",
+    "question": "锁主要用来解决什么问题？",
+    "expectedAnswer": "锁用于保护共享数据和临界区，避免多个 CPU 或执行流同时修改同一状态而产生数据竞争。",
+    "source": "第7章 锁；第7章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-012",
+    "category": "并发",
+    "question": "为什么统一的锁获取顺序可以降低死锁风险？",
+    "expectedAnswer": "如果所有执行流都按照同一个全局顺序获取多个锁，就不容易形成线程之间互相等待的环路，从而避免循环等待这一类死锁条件。",
+    "source": "第7章 锁，第7.4节 Deadlock and lock ordering；第7章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-013",
+    "category": "调度",
+    "question": "上下文切换大致包含哪些操作？",
+    "expectedAnswer": "上下文切换需要保存当前执行流的寄存器状态，选择下一个可运行进程，恢复目标进程的状态，然后从目标进程的保存位置继续执行。",
+    "source": "第8章 调度；第8章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-014",
+    "category": "同步",
+    "question": "进程为什么需要睡眠，而不是一直轮询等待？",
+    "expectedAnswer": "睡眠可以让暂时无法继续执行的进程释放 CPU，减少无效轮询；条件满足后再由其他执行流唤醒它。",
+    "source": "第9章 睡眠与唤醒；第9章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-015",
+    "category": "进程间通信",
+    "question": "管道适合解决什么问题？",
+    "expectedAnswer": "管道用于在进程之间传递字节流，一个进程写入，另一个进程读取，也可以把多个程序连接成流水线。",
+    "source": "第9章 睡眠与唤醒；第9章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-016",
+    "category": "文件系统",
+    "question": "inode 和文件名有什么区别？",
+    "expectedAnswer": "文件名是目录中的名称，inode 表示文件对象及其元数据和数据块索引。同一个 inode 可以通过多个目录项拥有多个名称。",
+    "source": "第10章 文件系统；第10章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-017",
+    "category": "文件系统",
+    "question": "文件系统日志为什么要把多个修改组织成事务？",
+    "expectedAnswer": "事务可以把一次文件系统操作涉及的修改作为一个整体提交。系统崩溃恢复时，可以判断一组更新是否完整，从而降低元数据和数据不一致的风险。",
+    "source": "第10章 文件系统，第10.4至10.6节；第10章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-018",
+    "category": "综合理解",
+    "question": "xv6 这套教学系统主要用哪些机制帮助学习操作系统？",
+    "expectedAnswer": "它通过一个规模较小但结构完整的教学内核，展示系统调用、进程、虚拟内存、陷阱、中断、设备驱动、锁、调度、睡眠唤醒和文件系统等核心机制。",
+    "source": "第12章 总结；第12章课程笔记",
+    "mustCite": true
+  },
+  {
+    "id": "OS-RAG-019",
+    "category": "资料不足测试",
+    "question": "Linux 6.10 内核中 CFS 调度器的最新源码实现是什么？",
+    "expectedAnswer": "当前测试资料只介绍 xv6 的教学性调度内容，没有覆盖 Linux 6.10 的最新源码实现。系统应明确说明资料不足，不能伪造本课程教材来源；如启用联网能力，可另行查询权威资料。",
+    "source": null,
+    "mustCite": false,
+    "expectedBehavior": "ABSTAIN_OR_LABEL_GENERAL_KNOWLEDGE"
+  },
+  {
+    "id": "OS-RAG-020",
+    "category": "生活问题测试",
+    "question": "我最近学习操作系统压力很大，应该怎么办？",
+    "expectedAnswer": "这不是课程资料问题。系统可以进行一般性的学习和生活支持，例如建议拆分任务、安排短时休息、和教师或同学交流；如果压力持续影响睡眠或日常生活，应寻求学校心理咨询或专业帮助。回答时不应伪造课程引用。",
+    "source": null,
+    "mustCite": false,
+    "expectedBehavior": "GENERAL_ASSISTANT_WITHOUT_COURSE_CITATION"
+  }
+]

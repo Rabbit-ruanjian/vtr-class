@@ -1,0 +1,161 @@
+spring:
+  application:
+    name: vtr-backend
+
+  profiles:
+    active: dev
+
+  main:
+    allow-bean-definition-overriding: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/vtr_db?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 300000
+      max-lifetime: 1200000
+      connection-timeout: 20000
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+        jdbc:
+          batch_size: 50
+        order_inserts: true
+        order_updates: true
+
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    timeout: 6000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+
+  mail:
+    protocol: smtp
+    default-encoding: UTF-8
+    host: ${MAIL_HOST:}
+    port: ${MAIL_PORT:465}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: ${MAIL_CONNECTION_TIMEOUT:10000}
+          timeout: ${MAIL_TIMEOUT:10000}
+          writetimeout: ${MAIL_WRITE_TIMEOUT:10000}
+          starttls:
+            enable: ${MAIL_STARTTLS:false}
+          ssl:
+            enable: ${MAIL_SSL:true}
+            trust: ${MAIL_HOST:}
+
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: false
+
+  # ✅ 添加静态资源映射配置
+  web:
+    resources:
+      static-locations: classpath:/static/
+      add-mappings: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  compression:
+    enabled: true
+
+# JWT 配置：secret 必须是 Base64 编码的、长度至少 64 字节的字符串
+jwt:
+  # 以下密钥是 64 字节的 Base64 编码（示例：c2VjcmV0LWtleS... 实际需替换为您的安全密钥）
+  secret: "c2VjcmV0LWtleS10aGF0LWlzLWxvbmctZW5vdWdoLXRvLW1lZXQtdGhlLXNpemUtcmVxdWlyZW1lbnQtZm9yLUhTNTEyLWFsZ29yaXRobS1pdC1tdXN0LWJlLWF0LWxlYXN0LTY0LWNoYXJhY3RlcnMtbG9uZw=="
+  expiration: 86400000   # 24小时（毫秒）
+
+verification:
+  # 默认禁用，避免未配置邮件服务时只打印日志却向用户提示“已发送”。
+  # 本地调试可显式设为 console；正式使用必须设为 smtp 并配置下方 MAIL_* 参数。
+  provider: ${VERIFICATION_PROVIDER:disabled}
+
+logging:
+  level:
+    com.vtr: DEBUG
+    org.springframework.security: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/vtr.log
+
+# ✅ 上传文件配置
+upload:
+  path: ./uploads/
+
+# ✅ 静态资源访问配置（用于访问上传的图片）
+static:
+  resource:
+    locations: file:${upload.path}
+
+# Kimi AI 配置：API Key 只从本机环境变量读取，不要写入代码或提交到 Git。
+kimi:
+  api-key: ${KIMI_API_KEY:${MOONSHOT_API_KEY:}}
+  # 中国大陆开放平台账号默认使用 api.moonshot.cn；海外账号可通过 KIMI_BASE_URL 覆盖为 api.moonshot.ai。
+  base-url: ${KIMI_BASE_URL:https://api.moonshot.cn/v1}
+  # KIMI_MODEL 可覆盖首选模型；服务端会在模型无权限时自动尝试后备模型。
+  model: ${KIMI_MODEL:kimi-k2.6}
+  # 普通概念问答开启快速模式：关闭 K2.6 深度思考并限制输出长度，避免简单问题等待过久；
+  # 计算题、课程教研 Agent 和图片/视频分析仍保留更强推理与质量校验。
+  fast-mode: ${KIMI_FAST_MODE:true}
+  fallback-models: ${KIMI_FALLBACK_MODELS:kimi-k2.6,kimi-latest,kimi-k3,moonshot-v1-128k-vision-preview,moonshot-v1-128k}
+  connect-timeout-ms: ${KIMI_CONNECT_TIMEOUT_MS:10000}
+  read-timeout-ms: ${KIMI_READ_TIMEOUT_MS:180000}
+  # 某些校园网/服务器只允许通过 HTTP 代理访问外网；不需要代理时保持为空即可。
+  proxy:
+    host: ${KIMI_PROXY_HOST:}
+    port: ${KIMI_PROXY_PORT:0}
+
+# 可选的 OpenAI 兼容 Embedding 服务。默认关闭；关闭或服务不可用时自动回退本地 RAG。
+ai:
+  embedding:
+    enabled: ${AI_EMBEDDING_ENABLED:false}
+    base-url: ${AI_EMBEDDING_BASE_URL:}
+    api-key: ${AI_EMBEDDING_API_KEY:}
+    model: ${AI_EMBEDDING_MODEL:text-embedding-3-small}
+  rate-limit:
+    requests-per-minute: ${AI_REQUESTS_PER_MINUTE:30}
+    max-concurrent: ${AI_MAX_CONCURRENT:3}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  health:
+    redis:
+      enabled: false
+    # Email is optional in the local/deployed teaching-room profile. An
+    # unconfigured SMTP account must not mark the whole backend DOWN and block
+    # the frontend/AI startup probe.
+    mail:
+      enabled: false
