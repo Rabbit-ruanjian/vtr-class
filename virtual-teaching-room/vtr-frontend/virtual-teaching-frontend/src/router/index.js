@@ -23,6 +23,7 @@ import ResearchTasksView from '@/views/ResearchTasksView.vue'
 import AdminActivityReviewView from '@/views/AdminActivityReviewView.vue'
 import AcademicClassesView from '@/views/AcademicClassesView.vue'
 import SchoolManagementView from '@/views/SchoolManagementView.vue'
+import PopupView from '@/views/PopupView.vue'
 
 const routes = [
   {
@@ -45,6 +46,15 @@ const routes = [
     meta: {
       title: '注册账号',
       guestOnly: true
+    }
+  },
+  {
+    path: '/popup',
+    name: 'popup',
+    component: PopupView,
+    meta: {
+      title: '薪火讲堂 · 科普',
+      fullscreen: true
     }
   },
   {
@@ -212,6 +222,7 @@ const routes = [
         component: ResearchTasksView,
         meta: { title: '教研任务', requiresAuth: true, roles: ['TEACHER', 'ADMIN', 'SUPER_ADMIN'] }
       },
+
       {
         path: 'notifications',
         name: 'notifications',

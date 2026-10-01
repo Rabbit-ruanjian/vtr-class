@@ -25,6 +25,11 @@ export const appMenus = [
     public: true
   },
   {
+    path: '/popup',
+    label: '科普',
+    public: true
+  },
+  {
     path: '/notifications',
     label: '消息通知',
     roles: ['STUDENT', 'TEACHER', 'ADMIN', 'SUPER_ADMIN']
